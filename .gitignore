@@ -54,3 +54,4 @@ crashlytics-build.properties
 # Ignore Unity Store Assets
 /[Aa]ssets/UnityStoreAssets/
 Assets/UnityStoreAssets.meta
+Assets/9.Secret*

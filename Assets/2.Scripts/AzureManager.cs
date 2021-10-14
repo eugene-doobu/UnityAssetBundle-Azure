@@ -6,9 +6,6 @@ using Azure.StorageServices;
 public class AzureManager : MonoBehaviour
 {
     public static AzureManager instance;
-
-    readonly string storageAccount = "-";
-    readonly string accessKey = "-";
     
     // 컨테이너 이름 표시방법 고민중
     readonly string versionContainer = "version";
@@ -39,7 +36,7 @@ public class AzureManager : MonoBehaviour
 
     void Start()
     {
-        client = StorageServiceClient.Create(storageAccount, accessKey);  //Azure 스토리지 클라이언트 설정
+        client = StorageServiceClient.Create(AzureKey.storageAccount, AzureKey.accessKey);  //Azure 스토리지 클라이언트 설정
         blobService = client.GetBlobService();
     }
     #endregion
